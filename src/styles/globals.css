@@ -1,0 +1,124 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.cdnfonts.com/css/drunk-company');
+
+h1,h2,h3,h4,h5,span,p,label,body,button,input{
+    font-family: 'drunk company', sans-serif;
+}
+.login-section {
+    background-image: url('https://www.cuidadoconelperro.com.mx/_next/image?url=https%3A%2F%2Fapp.cuidadoconelperro.com.mx%2Fmedia%2Fwysiwyg%2FHome%2FHome_Mujer.jpg&w=1920&q=75');
+    background-size: cover;
+}
+.categorias{
+  overflow:scroll;
+  position: relative;
+  bottom: 9rem;
+}
+.categoria{
+    color:white;
+    font-family: 'drunk company', sans-serif;
+    font-weight:bold;
+    font-size:110px;
+}
+.categoria:nth-child(2){
+    color: transparent; 
+  -webkit-text-stroke: 1px white; 
+  text-stroke: 1px white; 
+}
+.Toastify__toast-container--top-center{
+  width:100%;
+}
+.token{
+  line-break: anywhere;
+  font-weight: 200;
+  text-decoration: underline;
+}
+/* styles/globals.css */
+/* ... (other styles) */
+
+/* Login form styles */
+.logo{
+    width:200%;
+}
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .rounded {
+    border-radius: 0.375rem;
+  }
+  .px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .pt-6 {
+    padding-top: 1.5rem;
+  }
+  .pb-8 {
+    padding-bottom: 2rem;
+  }
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  .mr-2 {
+    margin-right: 0.5rem;
+  }
+  .border {
+    border: 1px solid #e2e8f0;
+  }
+  .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .leading-tight {
+    line-height: 1.25;
+  }
+  .text-gray-700 {
+    color: #4a5568;
+  }
+  .text-white {
+    color: #fff;
+  }
+  .bg-white {
+    background-color: #fff;
+  }
+  .bg-blue-500 {
+    background-color: #4299e1;
+  }
+  .hover\:bg-blue-700:hover {
+    background-color: #2b6cb0;
+  }
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  .text-md {
+    font-size: 1rem;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .block {
+    display: block;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .focus\:outline-none:focus {
+    outline: none;
+  }
+  .focus\:shadow-outline:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
