@@ -11,7 +11,7 @@ const FORGOT_PASSWORD_MUTATION = gql`
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [forgotPassword, { loading, error }] = useMutation(FORGOT_PASSWORD_MUTATION, {
-    client: client, // Pasar el cliente Apollo como opción
+    client: client, 
   });
 
   const handleSubmit = async (e: React.FormEvent) => {

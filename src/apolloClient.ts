@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://app.cuidadoconelperro.com.mx/graphql',
+  uri: process.env.NEXT_PUBLIC_GRAPHQL_URI,
   cache: new InMemoryCache(),
 });
 
