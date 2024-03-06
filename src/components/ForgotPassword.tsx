@@ -1,18 +1,9 @@
 import { useState } from 'react';
-import { gql, useMutation } from '@apollo/client';
-import client from '../apolloClient'; // 
-
-const FORGOT_PASSWORD_MUTATION = gql`
-  mutation ForgotPassword($email: String!) {
-    forgotPassword(email: $email)
-  }
-`;
+import { useForgotPasswordMutation } from '../services/graphql';
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState('');
-  const [forgotPassword, { loading, error }] = useMutation(FORGOT_PASSWORD_MUTATION, {
-    client: client, 
-  });
+  const [email, setEmail] = useState<string>('');
+  const [forgotPassword, { loading, error }] = useForgotPasswordMutation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

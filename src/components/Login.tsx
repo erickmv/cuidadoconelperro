@@ -1,34 +1,17 @@
 import { useEffect, useState } from 'react';
-import { gql, useMutation, ApolloError } from '@apollo/client';
-import client from '../apolloClient';
-import Link from 'next/link';
-import router from 'next/router';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-const LOGIN_MUTATION = gql`
-  mutation GenerateCustomerToken($email: String!, $password: String!) {
-    generateCustomerToken(email: $email, password: $password) {
-      token
-    }
-  }
-`;
+import Link from 'next/link';
+import router from 'next/router';
+import { useLoginMutation } from '../services/graphql';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [token, setToken] = useState('');
-  const [login, { loading, error }] = useMutation(LOGIN_MUTATION, {
-    client: client,
-    context: {
-      headers: {
-        Cookie: 'PHPSESSID=7b942f5fd07b473be03f8c984d29abcc',
-        Store: 'cuidadoconelperro_mx_store_view'
-      }
-    }
-  });
+  const [login, { loading, error }] = useLoginMutation();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     try {
       const { data } = await login({ variables: { email, password } });
@@ -65,6 +48,8 @@ const Login = () => {
       router.push('/home');
     }
   }, [token]);
+
+
 
   return (
     <>
